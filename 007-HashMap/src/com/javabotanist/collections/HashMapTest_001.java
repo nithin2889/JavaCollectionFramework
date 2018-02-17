@@ -1,5 +1,6 @@
 package com.javabotanist.collections;
 
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -29,16 +30,19 @@ public class HashMapTest_001 {
 		hm.put(3, "BB");
 		hm.put(1, "AA"); 
 		hm.put(4, "CC");
-		hm.put(6, "DD");
-		hm.put(8, "EE");
+		hm.put(1, "DD");
+		hm.put(3, "EE");
 		
 		System.out.println("Current HashMap content is "+hm);
 		
 		Set set = hm.entrySet();
 		Iterator iterator = set.iterator();
 		
-		System.out.println("Keys: "+hm.keySet());
-		System.out.println("Values: "+hm.values());
+		Set<Integer> keySet = hm.keySet();
+		System.out.println("Keys: "+keySet);
+		
+		Collection<String> values = hm.values();
+		System.out.println("Values: "+values);
 		
 		// Iterating using while loop
 		System.out.println("Iterating using while loop");
